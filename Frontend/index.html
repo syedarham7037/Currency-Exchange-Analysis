@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="titleContainer">
+        <h1 id="title">Exchange Rates over the Years</h1>
+    </div>
+    
+    <!--<p>Graph and Selection Field</p>-->
+    <div id="graphOptionsContainer">
+        <img id="mainGraph" src="./start_image.png"/>
+        
+        <div id="options">
+
+            <div id="metricDisplayed">
+                <div class="subtitle">Variables</div>
+                <br>
+                <select id="metricDisplayedInput">
+                    <option value="EURUSD">EUR to USD</option>
+                    <option value="BTCUSD">BTC to USD</option>
+                    <option value="EURCAD">EUR to CAD</option>
+                    <option value="EURGBP">EUR to GBP</option>
+                    <option value="GBPUSD">GBP to USD</option>
+                    <option value="USDCAD">USD to CAD</option>
+                    <option value="USDJPY">USD to JPY</option>
+                </select>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div id="price">
+                <div class="subtitle">Prices</div>
+                <br>
+                <label>
+                    <input type="checkbox" name="price" value="High"> High
+                </label>
+                <label>
+                    <input type="checkbox" name="price" value="Low"> Low
+                </label>
+                <label>
+                    <input type="checkbox" name="price" value="Avg" checked> Average
+                </label>
+            </div>
+            
+            <br>
+            <br>
+            <br>
+
+            <div id="timeRestriction">
+                <div class="subtitle">Time period</div>
+                <br>
+                <label>
+                    <input type="radio" name="time" value="D"> Day
+                </label>
+                <label>
+                    <input type="radio" name="time" value="M"> Month
+                </label>
+                <label>
+                    <input type="radio" name="time" value="Y" checked> Year
+                </label>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div id="buttonContainer">
+                <button id="loadGraphButton" onclick="generateGraph()">Create Graph</button>
+
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
